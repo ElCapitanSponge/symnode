@@ -1,5 +1,6 @@
 import { execFileSync } from "child_process"
 import { existsSync, lstatSync, rmdirSync, symlinkSync, unlinkSync } from "fs";
+import { join } from "path";
 
 /**
  * Symnode class
@@ -32,7 +33,7 @@ export class symnode {
      * @type {boolean}
      * @memberOf symnode
      */
-    private remove: boolean 
+    private remove: boolean
 
     /**
      * Creates an instance of symnode.
@@ -102,27 +103,41 @@ export class symnode {
      * @memberOf symnode
      */
     private args_parse(): void {
+        let use_prev: boolean = false
+        let prev: string | undefined;
         process.argv.forEach((arg: string) => {
-            let arg_split: string[] = arg.split('=')
-            if (arg_split.length === 2) {
-                switch (arg_split[0]) {
-                    case '-h':
-                    case '--help':
-                        this.help()
-                        break
-                    case '-s':
-                    case '--src':
-                        this.source = arg_split[1]
-                        break
-                    case '-d':
-                    case '--dest':
-                        this.destination = arg_split[1]
-                        break
-                    case '-r':
-                    case '--remove':
-                        this.remove = true
-                        break
-                }
+            let switch_arg: string = (use_prev) ? prev : arg
+            switch (switch_arg) {
+                case '-h':
+                case '--help':
+                    this.help()
+                    break
+                case '-s':
+                case '--src':
+                    if (use_prev){
+                        this.source = arg
+                        prev = undefined
+                        use_prev = false
+                    } else {
+                        prev = arg
+                        use_prev = true
+                    }
+                    break
+                case '-d':
+                case '--dest':
+                    if (use_prev) {
+                        this.destination = arg
+                        prev = undefined
+                        use_prev = false
+                    } else {
+                        prev = arg
+                        use_prev = true
+                    }
+                    break
+                case '-r':
+                case '--remove':
+                    this.remove = true
+                    break
             }
         })
         if ((this.remove && typeof this.destination === 'undefined') || (!this.remove && (typeof this.source === 'undefined' || typeof this.destination === 'undefined')))
@@ -142,8 +157,8 @@ export class symnode {
         console.log('\t-s, --src\t\tThe source file/directory')
         console.log('\t-d, --dest\t\tThe destination file/directory')
         console.log('\t-h, --help\t\tDisplay the help information for SYMNODE')
-        console.log('\n\nexample: node dist/index.js -s=<path to source file/directory> -d=<path to destination file/directory>')
-        console.log('\n\nexample: node dist/index.js -r -d=<path to file/directory to be removed>')
+        console.log('\n\nexample: node dist/index.js -s <path to source file/directory> -d <path to destination file/directory>')
+        console.log('\n\nexample: node dist/index.js -r -d <path to file/directory to be removed>')
         process.exit()
     }
 
