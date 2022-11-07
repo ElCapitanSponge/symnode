@@ -1,0 +1,12 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "entryPointStrategy": "expand",
+    "entryPoints": [
+        "./src"
+    ],
+    "name": "SymNODE",
+    "includeVersion": true,
+    "readme": "./README.md",
+    "out": "./docs",
+    "excludeExternals": false
+}

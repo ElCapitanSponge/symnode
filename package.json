@@ -1,12 +1,14 @@
 {
     "name": "symnode",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Multiplatform cli tool for crating symbolic links",
     "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
+        "watch": "tsc -w & nodemon -q -w ./src ./dist",
         "changelog": "auto-changelog -p && git add CHANGELOG.md",
-        "package": "npm pack --pack-destination releases"
+        "package": "npm pack --pack-destination releases",
+        "syft": "syft dir:./ --exclude ./dist --exclude ./docs --exclude ./sbom.json --output json --file ./sbom.json"
     },
     "repository": {
         "type": "git",
@@ -28,6 +30,8 @@
     },
     "devDependencies": {
         "@types/node": "^18.11.9",
-        "auto-changelog": "^2.4.0"
+        "auto-changelog": "^2.4.0",
+        "nodemon": "^2.0.20",
+        "typedoc": "^0.23.20"
     }
 }
