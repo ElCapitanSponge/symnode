@@ -1,11 +1,44 @@
 import { execFileSync } from "child_process"
 import { existsSync, lstatSync, rmdirSync, symlinkSync, unlinkSync } from "fs";
 
+/**
+ * Symnode class
+ * Symbolic link utility class for cli
+ * 
+ * @export
+ * @class symnode
+ */
 export class symnode {
+    /**
+     * The source location to be used for the symbolic link (if applicable)
+     * 
+     * @private
+     * @type {(string | undefined)}
+     * @memberOf symnode
+     */
     private source: string | undefined;
+    /**
+     * The desitination of the symbolic link, or the directory/folder that is to be removed
+     * 
+     * @private
+     * @type {(string | undefined)}
+     * @memberOf symnode
+     */
     private destination: string | undefined;
+    /**
+     * Flag for tracking if the process is running under removal mode or not
+     * 
+     * @private
+     * @type {boolean}
+     * @memberOf symnode
+     */
     private remove: boolean 
 
+    /**
+     * Creates an instance of symnode.
+     * 
+     * @memberOf symnode
+     */
     constructor() {
         this.remove = false
         if (this.admin_required()) {
@@ -15,16 +48,41 @@ export class symnode {
         this.args_parse()
     }
 
+    /**
+     * Utility for displaying error messages. Followed by the termination of the process with the applicable error code
+     * 
+     * @private
+     * @param {string} [message='ERROR'] The error message to be displayed
+     * @param {number} [exitCode=9] The applicable error code reflecting the process termination
+     * 
+     * @memberOf symnode
+     */
     private exit(message: string = 'ERROR', exitCode: number = 9): void {
         console.error(message)
         process.exitCode = exitCode
         process.exit()
     }
 
+    /**
+     * Check to see if administrator/super user privilages are required
+     * 
+     * @private
+     * @returns {boolean} 
+     * 
+     * @memberOf symnode
+     */
     private admin_required(): boolean {
         return process.platform === 'win32'
     }
 
+    /**
+     * Check to see if the shell is being executed with administrator/super user privilages
+     * 
+     * @private
+     * @returns {boolean} Returns true if running under administrator/super user privilages
+     * 
+     * @memberOf symnode
+     */
     private admin_running(): boolean {
         if (process.platform !== 'win32')
             return !!process.env.SUDO_UID
@@ -36,6 +94,13 @@ export class symnode {
         }
     }
 
+    /**
+     * Parsing and processing of the cli arguments
+     * 
+     * @private
+     * 
+     * @memberOf symnode
+     */
     private args_parse(): void {
         process.argv.forEach((arg: string) => {
             let arg_split: string[] = arg.split('=')
@@ -64,6 +129,13 @@ export class symnode {
             this.help()
     }
 
+    /**
+     * Helper text to be displayed
+     * 
+     * @private
+     * 
+     * @memberOf symnode
+     */
     private help(): void {
         console.log('SYMNODE ::: HELP')
         console.log('Required arguments')
@@ -75,18 +147,52 @@ export class symnode {
         process.exit()
     }
 
+    /**
+     * Utility for determining if the desired location exists
+     * 
+     * @private
+     * @param {string} loc The desired location
+     * @returns {boolean} Returns true if the location exists
+     * 
+     * @memberOf symnode
+     */
     private exists(loc: string): boolean {
         return existsSync(loc)
     }
 
+    /**
+     * Utility for determining if the desired location is a directory
+     * 
+     * @private
+     * @param {string} loc The desired location to be checked
+     * @returns {boolean} Returns true if the location is a directory
+     * 
+     * @memberOf symnode
+     */
     private is_dir(loc: string): boolean {
         return lstatSync(loc).isDirectory()
     }
 
+    /**
+     * Utility for determining if the desired location is a symbolic link
+     * 
+     * @private
+     * @param {string} loc Desired location to be checked
+     * @returns {boolean} Returns true if the location is a symbolic link
+     * 
+     * @memberOf symnode
+     */
     private is_symlink(loc: string): boolean {
         return lstatSync(loc).isSymbolicLink()
     }
 
+    /**
+     * Create a symbolic link from the source to the destination
+     * 
+     * @returns {boolean} Returns true if symbolic link is created
+     * 
+     * @memberOf symnode
+     */
     public link(): boolean {
         if (this.remove)
             this.exit('Running in removal mode.')
@@ -101,6 +207,13 @@ export class symnode {
         return true
     }
 
+    /**
+     * Destroy the destination file/folder
+     * 
+     * @returns {boolean} Returns true if successful
+     * 
+     * @memberOf symnode
+     */
     public destroy(): boolean {
         if (!this.remove)
             this.exit('You are not running in removal mode.')
@@ -111,6 +224,13 @@ export class symnode {
         return !this.exists(this.destination)
     }
 
+    /**
+     * Returns if you are running in removal mode or not
+     * 
+     * @returns {boolean} Returns true if in removal mode
+     * 
+     * @memberOf symnode
+     */
     public remove_mode(): boolean {
         return this.remove
     }
