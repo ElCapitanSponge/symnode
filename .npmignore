@@ -1,0 +1,6 @@
+src/
+docs/
+test/
+typedoc.json
+tsconfig.json
+releases/
