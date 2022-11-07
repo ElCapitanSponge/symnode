@@ -77,5 +77,5 @@ See [`CONTRIBUTING`](https://github.com/ElCapitanSponge/symnode/blob/main/CONTRI
 
 <!-- LICENSE -->
 # License
-Distributed under the MIT License. See [`LICENSE`](https://github.com/ElCapitanSponge/symnode/blob/main/LICENSE) for more information.
+Distributed under the Apache-2.0 License. See [`LICENSE`](https://github.com/ElCapitanSponge/symnode/blob/main/LICENSE) for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
