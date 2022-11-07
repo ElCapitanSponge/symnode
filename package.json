@@ -7,7 +7,7 @@
         "build": "tsc",
         "watch": "tsc -w & nodemon -q -w ./src ./dist",
         "docs": "npx typedoc --options ./typedoc.json",
-        "changelog": "auto-changelog -p && git add CHANGELOG.md",
+        "changelog": "auto-changelog -p --template keepachangelog --commit-limit false && git add CHANGELOG.md",
         "package": "npm pack --pack-destination releases",
         "syft": "syft dir:./ --exclude ./dist --exclude ./docs --exclude ./sbom.json --output json --file ./sbom.json"
     },
