@@ -1,24 +1,31 @@
 {
-  "name": "symnode",
-  "version": "1.0.0",
-  "description": "Multiplatform cli tool for crating symbolic links",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ElCapitanSponge/symnode.git"
-  },
-  "keywords": [
-    "filesystem",
-    "fs",
-    "symlink"
-  ],
-  "author": "Andrew Brunker <andrew@brunker.au>",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/ElCapitanSponge/symnode/issues"
-  },
-  "homepage": "https://github.com/ElCapitanSponge/symnode#readme"
+    "name": "symnode",
+    "version": "1.0.0",
+    "description": "Multiplatform cli tool for crating symbolic links",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "package": "npm pack --pack-destination releases"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ElCapitanSponge/symnode.git"
+    },
+    "keywords": [
+        "filesystem",
+        "fs",
+        "symlink"
+    ],
+    "author": "Andrew Brunker <andrew@brunker.au>",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/ElCapitanSponge/symnode/issues"
+    },
+    "homepage": "https://github.com/ElCapitanSponge/symnode#readme",
+    "dependencies": {
+        "typescript": "^4.8.4"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.9"
+    }
 }
