@@ -202,6 +202,21 @@ export class symnode {
     }
 
     /**
+     * Hander function for removal of directories and symlinks
+     * 
+     * @private
+     * @param {string} path 
+     * 
+     * @memberOf symnode
+     */
+    private destroy_handling(path: string):void {
+        if (this.is_dir(path))
+            rmdirSync(path)
+        else
+            unlinkSync(path)
+    }
+
+    /**
      * Create a symbolic link from the source to the destination
      * 
      * @returns {boolean} Returns true if symbolic link is created
@@ -212,6 +227,8 @@ export class symnode {
         if (this.remove)
             this.exit('Running in removal mode.')
         try {
+            if (this.is_dir(this.destination) || this.is_symlink(this.destination))
+                this.destroy_handling(this.destination)
             symlinkSync(this.source, this.destination, 'dir')
         } catch (err) {
             this.exit(err)
@@ -232,10 +249,7 @@ export class symnode {
     public destroy(): boolean {
         if (!this.remove)
             this.exit('You are not running in removal mode.')
-        if (this.is_dir(this.destination))
-            rmdirSync(this.destination)
-        else
-            unlinkSync(this.destination)
+        this.destroy_handling(this.destination)
         return !this.exists(this.destination)
     }
 

@@ -111,6 +111,15 @@ export declare class symnode {
      */
     private is_symlink;
     /**
+     * Hander function for removal of directories and symlinks
+     *
+     * @private
+     * @param {string} path
+     *
+     * @memberOf symnode
+     */
+    private destroy_handling;
+    /**
      * Create a symbolic link from the source to the destination
      *
      * @returns {boolean} Returns true if symbolic link is created
