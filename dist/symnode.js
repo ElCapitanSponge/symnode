@@ -172,6 +172,20 @@ class symnode {
         return (0, fs_1.lstatSync)(loc).isSymbolicLink();
     }
     /**
+     * Hander function for removal of directories and symlinks
+     *
+     * @private
+     * @param {string} path
+     *
+     * @memberOf symnode
+     */
+    destroy_handling(path) {
+        if (this.is_dir(path))
+            (0, fs_1.rmdirSync)(path);
+        else
+            (0, fs_1.unlinkSync)(path);
+    }
+    /**
      * Create a symbolic link from the source to the destination
      *
      * @returns {boolean} Returns true if symbolic link is created
@@ -182,6 +196,8 @@ class symnode {
         if (this.remove)
             this.exit('Running in removal mode.');
         try {
+            if (this.is_dir(this.destination) || this.is_symlink(this.destination))
+                this.destroy_handling(this.destination);
             (0, fs_1.symlinkSync)(this.source, this.destination, 'dir');
         }
         catch (err) {
@@ -202,10 +218,7 @@ class symnode {
     destroy() {
         if (!this.remove)
             this.exit('You are not running in removal mode.');
-        if (this.is_dir(this.destination))
-            (0, fs_1.rmdirSync)(this.destination);
-        else
-            (0, fs_1.unlinkSync)(this.destination);
+        this.destroy_handling(this.destination);
         return !this.exists(this.destination);
     }
     /**
