@@ -1,5 +1,5 @@
 import { execFileSync } from "child_process"
-import { existsSync, lstatSync, rmdirSync, symlinkSync, unlinkSync } from "fs";
+import { existsSync, lstatSync, mkdirSync, rmdirSync, symlinkSync, unlinkSync } from "fs";
 import { join } from "path";
 
 /**
@@ -217,6 +217,22 @@ export class symnode {
     }
 
     /**
+     * Generation of the desitination path if required
+     * 
+     * @private
+     * 
+     * @memberOf symnode
+     */
+    private generate_destination_path(): void {
+        if (! existsSync(this.destination)) {
+            let path_arr: string[] = this.destination.split('/')
+            // INFO: remove the name of the symlink folder from the path
+            path_arr.pop()
+            mkdirSync(path_arr.join('/'), { recursive: true })
+        }
+    }
+
+    /**
      * Create a symbolic link from the source to the destination
      * 
      * @returns {boolean} Returns true if symbolic link is created
@@ -227,6 +243,7 @@ export class symnode {
         if (this.remove)
             this.exit('Running in removal mode.')
         try {
+            this.generate_destination_path()
             if (this.is_dir(this.destination) || this.is_symlink(this.destination))
                 this.destroy_handling(this.destination)
             symlinkSync(this.source, this.destination, 'dir')
