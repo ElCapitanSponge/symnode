@@ -186,6 +186,21 @@ class symnode {
             (0, fs_1.unlinkSync)(path);
     }
     /**
+     * Generation of the desitination path if required
+     *
+     * @private
+     *
+     * @memberOf symnode
+     */
+    generate_destination_path() {
+        if (!(0, fs_1.existsSync)(this.destination)) {
+            let path_arr = this.destination.split('/');
+            // INFO: remove the name of the symlink folder from the path
+            path_arr.pop();
+            (0, fs_1.mkdirSync)(path_arr.join('/'), { recursive: true });
+        }
+    }
+    /**
      * Create a symbolic link from the source to the destination
      *
      * @returns {boolean} Returns true if symbolic link is created
@@ -196,6 +211,7 @@ class symnode {
         if (this.remove)
             this.exit('Running in removal mode.');
         try {
+            this.generate_destination_path();
             if (this.is_dir(this.destination) || this.is_symlink(this.destination))
                 this.destroy_handling(this.destination);
             (0, fs_1.symlinkSync)(this.source, this.destination, 'dir');

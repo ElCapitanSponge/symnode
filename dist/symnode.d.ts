@@ -120,6 +120,14 @@ export declare class symnode {
      */
     private destroy_handling;
     /**
+     * Generation of the desitination path if required
+     *
+     * @private
+     *
+     * @memberOf symnode
+     */
+    private generate_destination_path;
+    /**
      * Create a symbolic link from the source to the destination
      *
      * @returns {boolean} Returns true if symbolic link is created
