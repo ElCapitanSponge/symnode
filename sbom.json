@@ -43,6 +43,33 @@
    "purl": "pkg:npm/abbrev@1.1.1"
   },
   {
+   "id": "9606272f78d8010d",
+   "name": "ansi-styles",
+   "version": "3.2.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:ansi-styles:ansi-styles:3.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ansi-styles:ansi_styles:3.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ansi_styles:ansi-styles:3.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ansi_styles:ansi_styles:3.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ansi:ansi-styles:3.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:ansi:ansi_styles:3.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:ansi-styles:3.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:ansi_styles:3.2.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/ansi-styles@3.2.1"
+  },
+  {
    "id": "4472197a9098d00c",
    "name": "anymatch",
    "version": "3.1.2",
@@ -193,6 +220,54 @@
    "purl": "pkg:npm/braces@3.0.2"
   },
   {
+   "id": "780704dbe48f693f",
+   "name": "call-bind",
+   "version": "1.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:call-bind:call-bind:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:call-bind:call_bind:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:call_bind:call-bind:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:call_bind:call_bind:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:call:call-bind:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:call:call_bind:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:call-bind:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:call_bind:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/call-bind@1.0.2"
+  },
+  {
+   "id": "856d1828a6b54af7",
+   "name": "chalk",
+   "version": "2.4.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:chalk:chalk:2.4.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:chalk:2.4.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/chalk@2.4.2"
+  },
+  {
    "id": "a2b5fa50a0f3ce77",
    "name": "chokidar",
    "version": "3.5.3",
@@ -212,6 +287,60 @@
     "cpe:2.3:a:*:chokidar:3.5.3:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/chokidar@3.5.3"
+  },
+  {
+   "id": "d2927d165b417213",
+   "name": "color-convert",
+   "version": "1.9.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:color-convert:color-convert:1.9.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color-convert:color_convert:1.9.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color_convert:color-convert:1.9.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color_convert:color_convert:1.9.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color:color-convert:1.9.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color:color_convert:1.9.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:color-convert:1.9.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:color_convert:1.9.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/color-convert@1.9.3"
+  },
+  {
+   "id": "6e25a3dec8d7a62b",
+   "name": "color-name",
+   "version": "1.1.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:color-name:color-name:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color-name:color_name:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color_name:color-name:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color_name:color_name:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color:color-name:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:color:color_name:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:color-name:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:color_name:1.1.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/color-name@1.1.3"
   },
   {
    "id": "c86170953f33b9fe",
@@ -262,6 +391,33 @@
    "purl": "pkg:npm/concat-map@0.0.1"
   },
   {
+   "id": "30fb5e960598b6ac",
+   "name": "cross-spawn",
+   "version": "6.0.5",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:cross-spawn:cross-spawn:6.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:cross-spawn:cross_spawn:6.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:cross_spawn:cross-spawn:6.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:cross_spawn:cross_spawn:6.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:cross:cross-spawn:6.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:cross:cross_spawn:6.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:cross-spawn:6.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:cross_spawn:6.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/cross-spawn@6.0.5"
+  },
+  {
    "id": "f017927b70df1985",
    "name": "debug",
    "version": "3.2.7",
@@ -281,6 +437,149 @@
     "cpe:2.3:a:*:debug:3.2.7:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/debug@3.2.7"
+  },
+  {
+   "id": "b36ca1aa7a0d1682",
+   "name": "define-properties",
+   "version": "1.1.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:define-properties:define-properties:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:define-properties:define_properties:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:define_properties:define-properties:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:define_properties:define_properties:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:define:define-properties:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:define:define_properties:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:define-properties:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:define_properties:1.1.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/define-properties@1.1.4"
+  },
+  {
+   "id": "b32998eb5b1a4988",
+   "name": "error-ex",
+   "version": "1.3.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:error-ex:error-ex:1.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:error-ex:error_ex:1.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:error_ex:error-ex:1.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:error_ex:error_ex:1.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:error:error-ex:1.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:error:error_ex:1.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:error-ex:1.3.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:error_ex:1.3.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/error-ex@1.3.2"
+  },
+  {
+   "id": "f7f3e2b9f09d8908",
+   "name": "es-abstract",
+   "version": "1.20.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:es-abstract:es-abstract:1.20.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es-abstract:es_abstract:1.20.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es_abstract:es-abstract:1.20.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es_abstract:es_abstract:1.20.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es:es-abstract:1.20.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es:es_abstract:1.20.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:es-abstract:1.20.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:es_abstract:1.20.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/es-abstract@1.20.4"
+  },
+  {
+   "id": "4636097b4c91f7db",
+   "name": "es-to-primitive",
+   "version": "1.2.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:es-to-primitive:es-to-primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es-to-primitive:es_to_primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es_to_primitive:es-to-primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es_to_primitive:es_to_primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es-to:es-to-primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es-to:es_to_primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es_to:es-to-primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es_to:es_to_primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es:es-to-primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:es:es_to_primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:es-to-primitive:1.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:es_to_primitive:1.2.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/es-to-primitive@1.2.1"
+  },
+  {
+   "id": "7ffd2cd3558c424",
+   "name": "escape-string-regexp",
+   "version": "1.0.5",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:escape-string-regexp:escape-string-regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape-string-regexp:escape_string_regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape_string_regexp:escape-string-regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape_string_regexp:escape_string_regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape-string:escape-string-regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape-string:escape_string_regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape_string:escape-string-regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape_string:escape_string_regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape:escape-string-regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:escape:escape_string_regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:escape-string-regexp:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:escape_string_regexp:1.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/escape-string-regexp@1.0.5"
   },
   {
    "id": "bbe6c02cb75ac7c4",
@@ -329,6 +628,143 @@
    "purl": "pkg:npm/fsevents@2.3.2"
   },
   {
+   "id": "58acf7b381b3a07d",
+   "name": "function-bind",
+   "version": "1.1.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:function-bind:function-bind:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:function-bind:function_bind:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:function_bind:function-bind:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:function_bind:function_bind:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:function:function-bind:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:function:function_bind:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:function-bind:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:function_bind:1.1.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/function-bind@1.1.1"
+  },
+  {
+   "id": "c35e0de35199afb1",
+   "name": "function.prototype.name",
+   "version": "1.1.5",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:function.prototype.name:function.prototype.name:1.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:function.prototype.name:1.1.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/function.prototype.name@1.1.5"
+  },
+  {
+   "id": "5cf871c2367d7379",
+   "name": "functions-have-names",
+   "version": "1.2.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:functions-have-names:functions-have-names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions-have-names:functions_have_names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions_have_names:functions-have-names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions_have_names:functions_have_names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions-have:functions-have-names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions-have:functions_have_names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions_have:functions-have-names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions_have:functions_have_names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions:functions-have-names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:functions:functions_have_names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:functions-have-names:1.2.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:functions_have_names:1.2.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/functions-have-names@1.2.3"
+  },
+  {
+   "id": "7c3f3fdb9c7cc4b",
+   "name": "get-intrinsic",
+   "version": "1.1.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:get-intrinsic:get-intrinsic:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get-intrinsic:get_intrinsic:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get_intrinsic:get-intrinsic:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get_intrinsic:get_intrinsic:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get:get-intrinsic:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get:get_intrinsic:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:get-intrinsic:1.1.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:get_intrinsic:1.1.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/get-intrinsic@1.1.3"
+  },
+  {
+   "id": "29dbc555757a4330",
+   "name": "get-symbol-description",
+   "version": "1.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:get-symbol-description:get-symbol-description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get-symbol-description:get_symbol_description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get_symbol_description:get-symbol-description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get_symbol_description:get_symbol_description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get-symbol:get-symbol-description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get-symbol:get_symbol_description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get_symbol:get-symbol-description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get_symbol:get_symbol_description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get:get-symbol-description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:get:get_symbol_description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:get-symbol-description:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:get_symbol_description:1.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/get-symbol-description@1.0.0"
+  },
+  {
    "id": "674918afa4756478",
    "name": "glob-parent",
    "version": "5.1.2",
@@ -356,6 +792,33 @@
    "purl": "pkg:npm/glob-parent@5.1.2"
   },
   {
+   "id": "fe9d30e5c9dbcb2d",
+   "name": "graceful-fs",
+   "version": "4.2.10",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "ISC"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:graceful-fs:graceful-fs:4.2.10:*:*:*:*:*:*:*",
+    "cpe:2.3:a:graceful-fs:graceful_fs:4.2.10:*:*:*:*:*:*:*",
+    "cpe:2.3:a:graceful_fs:graceful-fs:4.2.10:*:*:*:*:*:*:*",
+    "cpe:2.3:a:graceful_fs:graceful_fs:4.2.10:*:*:*:*:*:*:*",
+    "cpe:2.3:a:graceful:graceful-fs:4.2.10:*:*:*:*:*:*:*",
+    "cpe:2.3:a:graceful:graceful_fs:4.2.10:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:graceful-fs:4.2.10:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:graceful_fs:4.2.10:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/graceful-fs@4.2.10"
+  },
+  {
    "id": "f06873f8dd716261",
    "name": "handlebars",
    "version": "4.7.7",
@@ -375,6 +838,54 @@
     "cpe:2.3:a:*:handlebars:4.7.7:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/handlebars@4.7.7"
+  },
+  {
+   "id": "b1ed3aa4716a3543",
+   "name": "has",
+   "version": "1.0.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:has:has:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has:1.0.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/has@1.0.3"
+  },
+  {
+   "id": "70a94da4099dbe91",
+   "name": "has-bigints",
+   "version": "1.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:has-bigints:has-bigints:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has-bigints:has_bigints:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_bigints:has-bigints:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_bigints:has_bigints:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has-bigints:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has_bigints:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has-bigints:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has_bigints:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/has-bigints@1.0.2"
   },
   {
    "id": "8d0b446fd528c874",
@@ -402,6 +913,122 @@
     "cpe:2.3:a:*:has_flag:3.0.0:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/has-flag@3.0.0"
+  },
+  {
+   "id": "4d8ca27a6b409ca7",
+   "name": "has-property-descriptors",
+   "version": "1.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:has-property-descriptors:has-property-descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has-property-descriptors:has_property_descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_property_descriptors:has-property-descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_property_descriptors:has_property_descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has-property:has-property-descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has-property:has_property_descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_property:has-property-descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_property:has_property_descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has-property-descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has_property_descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has-property-descriptors:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has_property_descriptors:1.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/has-property-descriptors@1.0.0"
+  },
+  {
+   "id": "81ac9b21e754b7c8",
+   "name": "has-symbols",
+   "version": "1.0.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:has-symbols:has-symbols:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has-symbols:has_symbols:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_symbols:has-symbols:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_symbols:has_symbols:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has-symbols:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has_symbols:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has-symbols:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has_symbols:1.0.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/has-symbols@1.0.3"
+  },
+  {
+   "id": "cabd039b881bfed3",
+   "name": "has-tostringtag",
+   "version": "1.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:has-tostringtag:has-tostringtag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has-tostringtag:has_tostringtag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_tostringtag:has-tostringtag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has_tostringtag:has_tostringtag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has-tostringtag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:has:has_tostringtag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has-tostringtag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:has_tostringtag:1.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/has-tostringtag@1.0.0"
+  },
+  {
+   "id": "b6e9ba89163c755f",
+   "name": "hosted-git-info",
+   "version": "2.8.9",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "ISC"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:hosted-git-info:hosted-git-info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted-git-info:hosted_git_info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted_git_info:hosted-git-info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted_git_info:hosted_git_info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted-git:hosted-git-info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted-git:hosted_git_info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted_git:hosted-git-info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted_git:hosted_git_info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted:hosted-git-info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:hosted:hosted_git_info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:hosted-git-info:2.8.9:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:hosted_git_info:2.8.9:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/hosted-git-info@2.8.9"
   },
   {
    "id": "b1c050bb05fa428c",
@@ -435,6 +1062,87 @@
    "purl": "pkg:npm/ignore-by-default@1.0.1"
   },
   {
+   "id": "60eb13d20ca263c2",
+   "name": "internal-slot",
+   "version": "1.0.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:internal-slot:internal-slot:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:internal-slot:internal_slot:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:internal_slot:internal-slot:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:internal_slot:internal_slot:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:internal:internal-slot:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:internal:internal_slot:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:internal-slot:1.0.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:internal_slot:1.0.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/internal-slot@1.0.3"
+  },
+  {
+   "id": "f28852d54cb01938",
+   "name": "is-arrayish",
+   "version": "0.2.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-arrayish:is-arrayish:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-arrayish:is_arrayish:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_arrayish:is-arrayish:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_arrayish:is_arrayish:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-arrayish:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_arrayish:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-arrayish:0.2.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_arrayish:0.2.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-arrayish@0.2.1"
+  },
+  {
+   "id": "ea2ae0d7c173a32a",
+   "name": "is-bigint",
+   "version": "1.0.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-bigint:is-bigint:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-bigint:is_bigint:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_bigint:is-bigint:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_bigint:is_bigint:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-bigint:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_bigint:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-bigint:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_bigint:1.0.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-bigint@1.0.4"
+  },
+  {
    "id": "b6acca3acb3e7d14",
    "name": "is-binary-path",
    "version": "2.1.0",
@@ -464,6 +1172,126 @@
     "cpe:2.3:a:*:is_binary_path:2.1.0:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/is-binary-path@2.1.0"
+  },
+  {
+   "id": "5c444afe52fe346d",
+   "name": "is-boolean-object",
+   "version": "1.1.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-boolean-object:is-boolean-object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-boolean-object:is_boolean_object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_boolean_object:is-boolean-object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_boolean_object:is_boolean_object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-boolean:is-boolean-object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-boolean:is_boolean_object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_boolean:is-boolean-object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_boolean:is_boolean_object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-boolean-object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_boolean_object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-boolean-object:1.1.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_boolean_object:1.1.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-boolean-object@1.1.2"
+  },
+  {
+   "id": "7c19d80d4115939b",
+   "name": "is-callable",
+   "version": "1.2.7",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-callable:is-callable:1.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-callable:is_callable:1.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_callable:is-callable:1.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_callable:is_callable:1.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-callable:1.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_callable:1.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-callable:1.2.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_callable:1.2.7:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-callable@1.2.7"
+  },
+  {
+   "id": "d4b502da060faeb8",
+   "name": "is-core-module",
+   "version": "2.11.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-core-module:is-core-module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-core-module:is_core_module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_core_module:is-core-module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_core_module:is_core_module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-core:is-core-module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-core:is_core_module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_core:is-core-module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_core:is_core_module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-core-module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_core_module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-core-module:2.11.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_core_module:2.11.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-core-module@2.11.0"
+  },
+  {
+   "id": "5294b44a771418f6",
+   "name": "is-date-object",
+   "version": "1.0.5",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-date-object:is-date-object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-date-object:is_date_object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_date_object:is-date-object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_date_object:is_date_object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-date:is-date-object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-date:is_date_object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_date:is-date-object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_date:is_date_object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-date-object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_date_object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-date-object:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_date_object:1.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-date-object@1.0.5"
   },
   {
    "id": "3eef50b3e70c504c",
@@ -520,6 +1348,37 @@
    "purl": "pkg:npm/is-glob@4.0.3"
   },
   {
+   "id": "f7b5a61a2e3eebc1",
+   "name": "is-negative-zero",
+   "version": "2.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-negative-zero:is-negative-zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-negative-zero:is_negative_zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_negative_zero:is-negative-zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_negative_zero:is_negative_zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-negative:is-negative-zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-negative:is_negative_zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_negative:is-negative-zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_negative:is_negative_zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-negative-zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_negative_zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-negative-zero:2.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_negative_zero:2.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-negative-zero@2.0.2"
+  },
+  {
    "id": "568b0ca9d9890d30",
    "name": "is-number",
    "version": "7.0.0",
@@ -547,6 +1406,236 @@
    "purl": "pkg:npm/is-number@7.0.0"
   },
   {
+   "id": "916217525989ba09",
+   "name": "is-number-object",
+   "version": "1.0.7",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-number-object:is-number-object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-number-object:is_number_object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_number_object:is-number-object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_number_object:is_number_object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-number:is-number-object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-number:is_number_object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_number:is-number-object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_number:is_number_object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-number-object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_number_object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-number-object:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_number_object:1.0.7:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-number-object@1.0.7"
+  },
+  {
+   "id": "575496caa2d72b41",
+   "name": "is-regex",
+   "version": "1.1.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-regex:is-regex:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-regex:is_regex:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_regex:is-regex:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_regex:is_regex:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-regex:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_regex:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-regex:1.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_regex:1.1.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-regex@1.1.4"
+  },
+  {
+   "id": "e8e719c8323c56d3",
+   "name": "is-shared-array-buffer",
+   "version": "1.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-shared-array-buffer:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-shared-array-buffer:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_shared_array_buffer:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_shared_array_buffer:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-shared-array:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-shared-array:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_shared_array:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_shared_array:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-shared:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-shared:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_shared:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_shared:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-shared-array-buffer:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_shared_array_buffer:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-shared-array-buffer@1.0.2"
+  },
+  {
+   "id": "2b106053e16e0167",
+   "name": "is-string",
+   "version": "1.0.7",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-string:is-string:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-string:is_string:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_string:is-string:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_string:is_string:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-string:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_string:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-string:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_string:1.0.7:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-string@1.0.7"
+  },
+  {
+   "id": "e5152a90c4e68f72",
+   "name": "is-symbol",
+   "version": "1.0.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-symbol:is-symbol:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-symbol:is_symbol:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_symbol:is-symbol:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_symbol:is_symbol:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-symbol:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_symbol:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-symbol:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_symbol:1.0.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-symbol@1.0.4"
+  },
+  {
+   "id": "faa2e3098776ced4",
+   "name": "is-weakref",
+   "version": "1.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:is-weakref:is-weakref:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is-weakref:is_weakref:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_weakref:is-weakref:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is_weakref:is_weakref:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is-weakref:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:is:is_weakref:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is-weakref:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:is_weakref:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/is-weakref@1.0.2"
+  },
+  {
+   "id": "760a886325bee7b6",
+   "name": "isexe",
+   "version": "2.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "ISC"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:isexe:isexe:2.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:isexe:2.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/isexe@2.0.0"
+  },
+  {
+   "id": "5c2a909e2cfb7da5",
+   "name": "json-parse-better-errors",
+   "version": "1.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:json-parse-better-errors:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json-parse-better-errors:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json_parse_better_errors:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json_parse_better_errors:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json-parse-better:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json-parse-better:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json_parse_better:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json_parse_better:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json-parse:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json-parse:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json_parse:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json_parse:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:json:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:json-parse-better-errors:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:json_parse_better_errors:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/json-parse-better-errors@1.0.2"
+  },
+  {
    "id": "4626fd91afcea1bb",
    "name": "jsonc-parser",
    "version": "3.2.0",
@@ -572,6 +1661,37 @@
     "cpe:2.3:a:*:jsonc_parser:3.2.0:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/jsonc-parser@3.2.0"
+  },
+  {
+   "id": "fec72c20eec870c2",
+   "name": "load-json-file",
+   "version": "4.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:load-json-file:load-json-file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load-json-file:load_json_file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load_json_file:load-json-file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load_json_file:load_json_file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load-json:load-json-file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load-json:load_json_file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load_json:load-json-file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load_json:load_json_file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load:load-json-file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:load:load_json_file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:load-json-file:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:load_json_file:4.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/load-json-file@4.0.0"
   },
   {
    "id": "a1424c323b19328e",
@@ -641,6 +1761,27 @@
     "cpe:2.3:a:*:marked:4.2.2:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/marked@4.2.2"
+  },
+  {
+   "id": "4ce7a7167b343a0b",
+   "name": "memorystream",
+   "version": "0.3.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:memorystream:memorystream:0.3.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:memorystream:0.3.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/memorystream@0.3.1"
   },
   {
    "id": "2d4df94c0d1a3ad3",
@@ -733,6 +1874,33 @@
    "purl": "pkg:npm/neo-async@2.6.2"
   },
   {
+   "id": "fb70414e1bcb0217",
+   "name": "nice-try",
+   "version": "1.0.5",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:nice-try:nice-try:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nice-try:nice_try:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nice_try:nice-try:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nice_try:nice_try:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nice:nice-try:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:nice:nice_try:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:nice-try:1.0.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:nice_try:1.0.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/nice-try@1.0.5"
+  },
+  {
    "id": "9c686bdb57bbed3d",
    "name": "node-fetch",
    "version": "2.6.7",
@@ -802,6 +1970,37 @@
    "purl": "pkg:npm/nopt@1.0.10"
   },
   {
+   "id": "91964c6f00ad7cf0",
+   "name": "normalize-package-data",
+   "version": "2.5.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "BSD-2-Clause"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:normalize-package-data:normalize-package-data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize-package-data:normalize_package_data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize_package_data:normalize-package-data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize_package_data:normalize_package_data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize-package:normalize-package-data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize-package:normalize_package_data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize_package:normalize-package-data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize_package:normalize_package_data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize:normalize-package-data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:normalize:normalize_package_data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:normalize-package-data:2.5.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:normalize_package_data:2.5.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/normalize-package-data@2.5.0"
+  },
+  {
    "id": "f5413061c0df6f1c",
    "name": "normalize-path",
    "version": "3.0.0",
@@ -827,6 +2026,112 @@
     "cpe:2.3:a:*:normalize_path:3.0.0:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/normalize-path@3.0.0"
+  },
+  {
+   "id": "6307e4cc0b244cc8",
+   "name": "npm-run-all",
+   "version": "4.1.5",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:npm-run-all:npm-run-all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm-run-all:npm_run_all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm_run_all:npm-run-all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm_run_all:npm_run_all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm-run:npm-run-all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm-run:npm_run_all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm_run:npm-run-all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm_run:npm_run_all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm:npm-run-all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:npm:npm_run_all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:npm-run-all:4.1.5:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:npm_run_all:4.1.5:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/npm-run-all@4.1.5"
+  },
+  {
+   "id": "35ba0ac713e1d9c2",
+   "name": "object-inspect",
+   "version": "1.12.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:object-inspect:object-inspect:1.12.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object-inspect:object_inspect:1.12.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object_inspect:object-inspect:1.12.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object_inspect:object_inspect:1.12.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object:object-inspect:1.12.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object:object_inspect:1.12.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:object-inspect:1.12.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:object_inspect:1.12.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/object-inspect@1.12.2"
+  },
+  {
+   "id": "852386386c5dc634",
+   "name": "object-keys",
+   "version": "1.1.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:object-keys:object-keys:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object-keys:object_keys:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object_keys:object-keys:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object_keys:object_keys:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object:object-keys:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:object:object_keys:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:object-keys:1.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:object_keys:1.1.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/object-keys@1.1.1"
+  },
+  {
+   "id": "f8483913f34d49f0",
+   "name": "object.assign",
+   "version": "4.1.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:object.assign:object.assign:4.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:object.assign:4.1.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/object.assign@4.1.4"
   },
   {
    "id": "be1b8e83c5d5cb38",
@@ -860,6 +2165,114 @@
    "purl": "pkg:npm/parse-github-url@1.0.2"
   },
   {
+   "id": "851904ced9378132",
+   "name": "parse-json",
+   "version": "4.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:parse-json:parse-json:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:parse-json:parse_json:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:parse_json:parse-json:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:parse_json:parse_json:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:parse:parse-json:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:parse:parse_json:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:parse-json:4.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:parse_json:4.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/parse-json@4.0.0"
+  },
+  {
+   "id": "7812a58867a88f47",
+   "name": "path-key",
+   "version": "2.0.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:path-key:path-key:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path-key:path_key:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path_key:path-key:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path_key:path_key:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path:path-key:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path:path_key:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:path-key:2.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:path_key:2.0.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/path-key@2.0.1"
+  },
+  {
+   "id": "f54d7bbbc657c635",
+   "name": "path-parse",
+   "version": "1.0.7",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:path-parse:path-parse:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path-parse:path_parse:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path_parse:path-parse:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path_parse:path_parse:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path:path-parse:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path:path_parse:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:path-parse:1.0.7:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:path_parse:1.0.7:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/path-parse@1.0.7"
+  },
+  {
+   "id": "18ed5505bd061622",
+   "name": "path-type",
+   "version": "3.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:path-type:path-type:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path-type:path_type:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path_type:path-type:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path_type:path_type:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path:path-type:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:path:path_type:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:path-type:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:path_type:3.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/path-type@3.0.0"
+  },
+  {
    "id": "38bc627ed4e64c09",
    "name": "picomatch",
    "version": "2.3.1",
@@ -879,6 +2292,48 @@
     "cpe:2.3:a:*:picomatch:2.3.1:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/picomatch@2.3.1"
+  },
+  {
+   "id": "2fa9752740ba3bde",
+   "name": "pidtree",
+   "version": "0.3.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:pidtree:pidtree:0.3.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:pidtree:0.3.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/pidtree@0.3.1"
+  },
+  {
+   "id": "b911dd748f05ca41",
+   "name": "pify",
+   "version": "3.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:pify:pify:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:pify:3.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/pify@3.0.0"
   },
   {
    "id": "f746c624cc2d6b1b",
@@ -902,6 +2357,33 @@
    "purl": "pkg:npm/pstree.remy@1.1.8"
   },
   {
+   "id": "8ed1014e4db1acd1",
+   "name": "read-pkg",
+   "version": "3.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:read-pkg:read-pkg:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:read-pkg:read_pkg:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:read_pkg:read-pkg:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:read_pkg:read_pkg:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:read:read-pkg:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:read:read_pkg:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:read-pkg:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:read_pkg:3.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/read-pkg@3.0.0"
+  },
+  {
    "id": "5775f1a35865b6bb",
    "name": "readdirp",
    "version": "3.6.0",
@@ -921,6 +2403,79 @@
     "cpe:2.3:a:*:readdirp:3.6.0:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/readdirp@3.6.0"
+  },
+  {
+   "id": "3c4da23f22ab6268",
+   "name": "regexp.prototype.flags",
+   "version": "1.4.3",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:regexp.prototype.flags:regexp.prototype.flags:1.4.3:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:regexp.prototype.flags:1.4.3:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/regexp.prototype.flags@1.4.3"
+  },
+  {
+   "id": "c86472c2553fdfff",
+   "name": "resolve",
+   "version": "1.22.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:resolve:resolve:1.22.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:resolve:1.22.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/resolve@1.22.1"
+  },
+  {
+   "id": "165621c5b5d26fb",
+   "name": "safe-regex-test",
+   "version": "1.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:safe-regex-test:safe-regex-test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe-regex-test:safe_regex_test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe_regex_test:safe-regex-test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe_regex_test:safe_regex_test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe-regex:safe-regex-test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe-regex:safe_regex_test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe_regex:safe-regex-test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe_regex:safe_regex_test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe:safe-regex-test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:safe:safe_regex_test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:safe-regex-test:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:safe_regex_test:1.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/safe-regex-test@1.0.0"
   },
   {
    "id": "2d5a5405be845dc6",
@@ -944,6 +2499,87 @@
    "purl": "pkg:npm/semver@7.3.8"
   },
   {
+   "id": "d5c19ef6b6d126dd",
+   "name": "shebang-command",
+   "version": "1.2.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:shebang-command:shebang-command:1.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang-command:shebang_command:1.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang_command:shebang-command:1.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang_command:shebang_command:1.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang:shebang-command:1.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang:shebang_command:1.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:shebang-command:1.2.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:shebang_command:1.2.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/shebang-command@1.2.0"
+  },
+  {
+   "id": "23b8b1638c7b1ff0",
+   "name": "shebang-regex",
+   "version": "1.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:shebang-regex:shebang-regex:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang-regex:shebang_regex:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang_regex:shebang-regex:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang_regex:shebang_regex:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang:shebang-regex:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shebang:shebang_regex:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:shebang-regex:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:shebang_regex:1.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/shebang-regex@1.0.0"
+  },
+  {
+   "id": "eee322c55a2a3121",
+   "name": "shell-quote",
+   "version": "1.7.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:shell-quote:shell-quote:1.7.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shell-quote:shell_quote:1.7.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shell_quote:shell-quote:1.7.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shell_quote:shell_quote:1.7.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shell:shell-quote:1.7.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:shell:shell_quote:1.7.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:shell-quote:1.7.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:shell_quote:1.7.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/shell-quote@1.7.4"
+  },
+  {
    "id": "f9eeab2685bebefd",
    "name": "shiki",
    "version": "0.11.1",
@@ -963,6 +2599,33 @@
     "cpe:2.3:a:*:shiki:0.11.1:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/shiki@0.11.1"
+  },
+  {
+   "id": "138e3f49160e16a5",
+   "name": "side-channel",
+   "version": "1.0.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:side-channel:side-channel:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:side-channel:side_channel:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:side_channel:side-channel:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:side_channel:side_channel:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:side:side-channel:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:side:side_channel:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:side-channel:1.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:side_channel:1.0.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/side-channel@1.0.4"
   },
   {
    "id": "19cdbe2e4f86d20c",
@@ -1023,6 +2686,212 @@
    "purl": "pkg:npm/source-map@0.6.1"
   },
   {
+   "id": "f23f225cc17bf16a",
+   "name": "spdx-correct",
+   "version": "3.1.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "Apache-2.0"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:spdx-correct:spdx-correct:3.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-correct:spdx_correct:3.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_correct:spdx-correct:3.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_correct:spdx_correct:3.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx-correct:3.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx_correct:3.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx-correct:3.1.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx_correct:3.1.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/spdx-correct@3.1.1"
+  },
+  {
+   "id": "e0f29c4fb6588db6",
+   "name": "spdx-exceptions",
+   "version": "2.3.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "CC-BY-3.0"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:spdx-exceptions:spdx-exceptions:2.3.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-exceptions:spdx_exceptions:2.3.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_exceptions:spdx-exceptions:2.3.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_exceptions:spdx_exceptions:2.3.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx-exceptions:2.3.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx_exceptions:2.3.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx-exceptions:2.3.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx_exceptions:2.3.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/spdx-exceptions@2.3.0"
+  },
+  {
+   "id": "895885049297a1e3",
+   "name": "spdx-expression-parse",
+   "version": "3.0.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:spdx-expression-parse:spdx-expression-parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-expression-parse:spdx_expression_parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_expression_parse:spdx-expression-parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_expression_parse:spdx_expression_parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-expression:spdx-expression-parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-expression:spdx_expression_parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_expression:spdx-expression-parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_expression:spdx_expression_parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx-expression-parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx_expression_parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx-expression-parse:3.0.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx_expression_parse:3.0.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/spdx-expression-parse@3.0.1"
+  },
+  {
+   "id": "73414b4c8a064fe3",
+   "name": "spdx-license-ids",
+   "version": "3.0.12",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:spdx-license-ids:spdx-license-ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-license-ids:spdx_license_ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_license_ids:spdx-license-ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_license_ids:spdx_license_ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-license:spdx-license-ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx-license:spdx_license_ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_license:spdx-license-ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx_license:spdx_license_ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx-license-ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:spdx:spdx_license_ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx-license-ids:3.0.12:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:spdx_license_ids:3.0.12:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/spdx-license-ids@3.0.12"
+  },
+  {
+   "id": "f5beb19bf4d370f3",
+   "name": "string.prototype.padend",
+   "version": "3.1.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:string.prototype.padend:string.prototype.padend:3.1.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:string.prototype.padend:3.1.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/string.prototype.padend@3.1.4"
+  },
+  {
+   "id": "70999e564f085822",
+   "name": "string.prototype.trimend",
+   "version": "1.0.6",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:string.prototype.trimend:string.prototype.trimend:1.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:string.prototype.trimend:1.0.6:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/string.prototype.trimend@1.0.6"
+  },
+  {
+   "id": "20708efa7136fa76",
+   "name": "string.prototype.trimstart",
+   "version": "1.0.6",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:string.prototype.trimstart:string.prototype.trimstart:1.0.6:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:string.prototype.trimstart:1.0.6:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/string.prototype.trimstart@1.0.6"
+  },
+  {
+   "id": "7b983f5c37e782ed",
+   "name": "strip-bom",
+   "version": "3.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:strip-bom:strip-bom:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:strip-bom:strip_bom:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:strip_bom:strip-bom:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:strip_bom:strip_bom:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:strip:strip-bom:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:strip:strip_bom:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:strip-bom:3.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:strip_bom:3.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/strip-bom@3.0.0"
+  },
+  {
    "id": "b23abb8defc6f354",
    "name": "supports-color",
    "version": "5.5.0",
@@ -1048,6 +2917,41 @@
     "cpe:2.3:a:*:supports_color:5.5.0:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/supports-color@5.5.0"
+  },
+  {
+   "id": "afb378dfc00206bc",
+   "name": "supports-preserve-symlinks-flag",
+   "version": "1.0.0",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:supports-preserve-symlinks-flag:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports-preserve-symlinks-flag:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports_preserve_symlinks_flag:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports_preserve_symlinks_flag:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports-preserve-symlinks:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports-preserve-symlinks:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports_preserve_symlinks:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports_preserve_symlinks:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports-preserve:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports-preserve:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports_preserve:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports_preserve:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:supports:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:supports-preserve-symlinks-flag:1.0.0:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:supports_preserve_symlinks_flag:1.0.0:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0"
   },
   {
    "id": "c5c32ac12f9dbb",
@@ -1192,6 +3096,33 @@
    "purl": "pkg:npm/uglify-js@3.17.4"
   },
   {
+   "id": "66a49fac35943abc",
+   "name": "unbox-primitive",
+   "version": "1.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:unbox-primitive:unbox-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:unbox-primitive:unbox_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:unbox_primitive:unbox-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:unbox_primitive:unbox_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:unbox:unbox-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:unbox:unbox_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:unbox-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:unbox_primitive:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/unbox-primitive@1.0.2"
+  },
+  {
    "id": "1faecf737ed0891a",
    "name": "undefsafe",
    "version": "2.0.5",
@@ -1211,6 +3142,41 @@
     "cpe:2.3:a:*:undefsafe:2.0.5:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/undefsafe@2.0.5"
+  },
+  {
+   "id": "fcbeb651d5d20d01",
+   "name": "validate-npm-package-license",
+   "version": "3.0.4",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "Apache-2.0"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:validate-npm-package-license:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate-npm-package-license:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate_npm_package_license:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate_npm_package_license:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate-npm-package:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate-npm-package:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate_npm_package:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate_npm_package:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate-npm:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate-npm:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate_npm:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate_npm:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:validate:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:validate-npm-package-license:3.0.4:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:validate_npm_package_license:3.0.4:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/validate-npm-package-license@3.0.4"
   },
   {
    "id": "a5ca7d4cd9b5cd11",
@@ -1319,6 +3285,58 @@
     "cpe:2.3:a:*:whatwg_url:5.0.0:*:*:*:*:*:*:*"
    ],
    "purl": "pkg:npm/whatwg-url@5.0.0"
+  },
+  {
+   "id": "516db8c6bd8ec30b",
+   "name": "which",
+   "version": "1.3.1",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "ISC"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:which:which:1.3.1:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:which:1.3.1:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/which@1.3.1"
+  },
+  {
+   "id": "80f9275fad1d97bc",
+   "name": "which-boxed-primitive",
+   "version": "1.0.2",
+   "type": "npm",
+   "foundBy": "javascript-lock-cataloger",
+   "locations": [
+    {
+     "path": "package-lock.json"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "javascript",
+   "cpes": [
+    "cpe:2.3:a:which-boxed-primitive:which-boxed-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which-boxed-primitive:which_boxed_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which_boxed_primitive:which-boxed-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which_boxed_primitive:which_boxed_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which-boxed:which-boxed-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which-boxed:which_boxed_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which_boxed:which-boxed-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which_boxed:which_boxed_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which:which-boxed-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:which:which_boxed_primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:which-boxed-primitive:1.0.2:*:*:*:*:*:*:*",
+    "cpe:2.3:a:*:which_boxed_primitive:1.0.2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:npm/which-boxed-primitive@1.0.2"
   },
   {
    "id": "56ba32e48e63cc07",
