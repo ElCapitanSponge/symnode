@@ -31,6 +31,15 @@ export declare class symnode {
      */
     private remove;
     /**
+     * Flag for iff the link to be created is a file otherwise dir is assumed
+     * Default to Directory (false)
+     *
+     * @private
+     * @type {boolean}
+     * @memberof symnode
+     */
+    private file_link;
+    /**
      * Creates an instance of symnode.
      *
      * @memberOf symnode

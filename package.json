@@ -10,6 +10,8 @@
         "changelog": "auto-changelog -p --template keepachangelog --commit-limit false && git add CHANGELOG.md",
         "package": "npm pack --pack-destination releases",
         "release": "npm-run-all build docs syft changelog package",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
         "syft": "syft dir:./ --exclude ./dist --exclude ./docs --exclude ./sbom.json --output json --file ./sbom.json"
     },
     "type": "module",
@@ -22,7 +24,7 @@
         "fs",
         "symlink"
     ],
-    "author": "Andrew Brunker <andrew@brunker.au>",
+    "author": "Andrew Brunker <andrew@brunker.net.au>",
     "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/ElCapitanSponge/symnode/issues"

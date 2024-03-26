@@ -18,7 +18,17 @@
                 "@typescript-eslint"
             ],
             "parser": "@typescript-eslint/parser",
-            "rules": {}
+            "rules": {
+                "quotes": [
+                    "error",
+                    "double"
+                ],
+                "indent": [
+                    "error",
+                    4,
+                    {"SwitchCase": 1}
+                ]
+            }
         }
     ]
 }
