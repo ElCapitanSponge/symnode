@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.symnode = void 0;
-const child_process_1 = require("child_process");
-const fs_1 = require("fs");
+import { execFileSync } from "child_process";
+import { existsSync, lstatSync, mkdirSync, rmdirSync, symlinkSync, unlinkSync } from "fs";
 /**
  * Symnode class
  * Symbolic link utility class for cli
@@ -10,17 +7,51 @@ const fs_1 = require("fs");
  * @export
  * @class symnode
  */
-class symnode {
+export class symnode {
+    /**
+     * The source location to be used for the symbolic link (if applicable)
+     *
+     * @private
+     * @type {(string | undefined)}
+     * @memberOf symnode
+     */
+    source;
+    /**
+     * The destination of the symbolic link, or the directory/folder that is to be removed
+     *
+     * @private
+     * @type {(string | undefined)}
+     * @memberOf symnode
+     */
+    destination;
+    /**
+     * Flag for tracking if the process is running under removal mode or not
+     *
+     * @private
+     * @type {boolean}
+     * @memberOf symnode
+     */
+    remove;
+    /**
+     * Flag for iff the link to be created is a file otherwise dir is assumed
+     * Default to Directory (false)
+     *
+     * @private
+     * @type {boolean}
+     * @memberof symnode
+     */
+    file_link;
     /**
      * Creates an instance of symnode.
      *
      * @memberOf symnode
      */
     constructor() {
+        this.file_link = false;
         this.remove = false;
         if (this.admin_required()) {
             if (!this.admin_running())
-                this.exit('Administrator/Elevated shell privileges are required');
+                this.exit("Administrator/Elevated shell privileges are required");
         }
         this.args_parse();
     }
@@ -33,7 +64,7 @@ class symnode {
      *
      * @memberOf symnode
      */
-    exit(message = 'ERROR', exitCode = 9) {
+    exit(message = "ERROR", exitCode = 9) {
         console.error(message);
         process.exitCode = exitCode;
         process.exit();
@@ -47,7 +78,7 @@ class symnode {
      * @memberOf symnode
      */
     admin_required() {
-        return process.platform === 'win32';
+        return process.platform === "win32";
     }
     /**
      * Check to see if the shell is being executed with administrator/super user privileges
@@ -58,10 +89,10 @@ class symnode {
      * @memberOf symnode
      */
     admin_running() {
-        if (process.platform !== 'win32')
-            return !!process.env.SUDO_UID;
+        if (process.platform !== "win32")
+            return !!process.env["SUDO_UID"];
         try {
-            (0, child_process_1.execFileSync)("net", ["session"], { "stdio": "ignore" });
+            execFileSync("net", ["session"], { "stdio": "ignore" });
             return true;
         }
         catch (err) {
@@ -79,14 +110,14 @@ class symnode {
         let use_prev = false;
         let prev;
         process.argv.forEach((arg) => {
-            let switch_arg = (use_prev) ? prev : arg;
+            const switch_arg = (use_prev) ? prev : arg;
             switch (switch_arg) {
-                case '-h':
-                case '--help':
+                case "-h":
+                case "--help":
                     this.help();
                     break;
-                case '-s':
-                case '--src':
+                case "-s":
+                case "--src":
                     if (use_prev) {
                         this.source = arg;
                         prev = undefined;
@@ -97,8 +128,8 @@ class symnode {
                         use_prev = true;
                     }
                     break;
-                case '-d':
-                case '--dest':
+                case "-d":
+                case "--dest":
                     if (use_prev) {
                         this.destination = arg;
                         prev = undefined;
@@ -109,14 +140,22 @@ class symnode {
                         use_prev = true;
                     }
                     break;
-                case '-r':
-                case '--remove':
+                case "-r":
+                case "--remove":
                     this.remove = true;
+                    break;
+                case "-f":
+                case "--file":
+                    this.file_link = true;
                     break;
             }
         });
-        if ((this.remove && typeof this.destination === 'undefined') || (!this.remove && (typeof this.source === 'undefined' || typeof this.destination === 'undefined')))
+        if ((this.remove && typeof this.destination === "undefined") ||
+            (!this.remove &&
+                (typeof this.source === "undefined" ||
+                    typeof this.destination === "undefined"))) {
             this.help();
+        }
     }
     /**
      * Helper text to be displayed
@@ -126,13 +165,15 @@ class symnode {
      * @memberOf symnode
      */
     help() {
-        console.log('SYMNODE ::: HELP');
-        console.log('Required arguments');
-        console.log('\t-s, --src\t\tThe source file/directory');
-        console.log('\t-d, --dest\t\tThe destination file/directory');
-        console.log('\t-h, --help\t\tDisplay the help information for SYMNODE');
-        console.log('\n\nexample: node dist/index.js -s <path to source file/directory> -d <path to destination file/directory>');
-        console.log('\n\nexample: node dist/index.js -r -d <path to file/directory to be removed>');
+        console.log("SYMNODE ::: HELP");
+        console.log("Required arguments");
+        console.log("\t-s, --src\t\tThe source file/directory");
+        console.log("\t-d, --dest\t\tThe destination file/directory");
+        console.log("\t-r, --remove\t\tRemove the desired symlink");
+        console.log("\t-f, --file\t\tThe symlink to be created is for a file");
+        console.log("\t-h, --help\t\tDisplay the help information for SYMNODE");
+        console.log("\n\nexample: node dist/index.js -s <path to source file/directory> -d <path to destination file/directory>");
+        console.log("\n\nexample: node dist/index.js -r -d <path to file/directory to be removed>");
         process.exit();
     }
     /**
@@ -145,7 +186,7 @@ class symnode {
      * @memberOf symnode
      */
     exists(loc) {
-        return (0, fs_1.existsSync)(loc);
+        return existsSync(loc);
     }
     /**
      * Utility for determining if the desired location is a directory
@@ -157,7 +198,7 @@ class symnode {
      * @memberOf symnode
      */
     is_dir(loc) {
-        return (0, fs_1.lstatSync)(loc).isDirectory();
+        return lstatSync(loc).isDirectory();
     }
     /**
      * Utility for determining if the desired location is a file
@@ -169,7 +210,7 @@ class symnode {
      * @memberof symnode
      */
     is_file(loc) {
-        return (0, fs_1.lstatSync)(loc).isFile();
+        return lstatSync(loc).isFile();
     }
     /**
      * Utility for determining if the desired location is a symbolic link
@@ -181,7 +222,7 @@ class symnode {
      * @memberOf symnode
      */
     is_symlink(loc) {
-        return (0, fs_1.lstatSync)(loc).isSymbolicLink();
+        return lstatSync(loc).isSymbolicLink();
     }
     /**
      * Handler function for removal of directories and symlinks
@@ -193,9 +234,9 @@ class symnode {
      */
     destroy_handling(path) {
         if (this.is_dir(path))
-            (0, fs_1.rmdirSync)(path);
+            rmdirSync(path);
         else
-            (0, fs_1.unlinkSync)(path);
+            unlinkSync(path);
     }
     /**
      * Generation of the destination path if required
@@ -205,11 +246,13 @@ class symnode {
      * @memberOf symnode
      */
     generate_destination_path() {
-        if (!(0, fs_1.existsSync)(this.destination)) {
-            let path_arr = this.destination.split('/');
-            // INFO: remove the name of the symlink folder from the path
-            path_arr.pop();
-            (0, fs_1.mkdirSync)(path_arr.join('/'), { recursive: true });
+        if (undefined !== this.destination) {
+            if (!existsSync(this.destination)) {
+                const path_arr = this.destination.split("/");
+                // INFO: remove the name of the symlink folder from the path
+                path_arr.pop();
+                mkdirSync(path_arr.join("/"), { recursive: true });
+            }
         }
     }
     /**
@@ -220,25 +263,38 @@ class symnode {
      * @memberOf symnode
      */
     link() {
+        if (undefined === this.destination ||
+            undefined === this.source) {
+            return false;
+        }
         if (this.remove)
-            this.exit('Running in removal mode.');
+            this.exit("Running in removal mode.");
         try {
             this.generate_destination_path();
             if (this.is_dir(this.destination) ||
                 this.is_symlink(this.destination)) {
                 this.destroy_handling(this.destination);
             }
-            if (this.is_dir(this.source)) {
-                (0, fs_1.symlinkSync)(this.source, this.destination, 'dir');
+            if (this.is_dir(this.source) ||
+                (this.is_symlink(this.source) &&
+                    !this.file_link)) {
+                symlinkSync(this.source, this.destination, "dir");
             }
-            else if (this.is_file(this.source)) {
-                (0, fs_1.symlinkSync)(this.source, this.destination, 'file');
+            else if (this.is_file(this.source) ||
+                (this.is_symlink(this.source) &&
+                    this.file_link)) {
+                symlinkSync(this.source, this.destination, "file");
             }
             else {
                 throw new Error("source is not an existing file or dir");
             }
         }
         catch (err) {
+            if ("object" === typeof err) {
+                const tmp_err = err;
+                this.exit(tmp_err.message);
+                return false;
+            }
             this.exit(err);
             return false;
         }
@@ -254,8 +310,11 @@ class symnode {
      * @memberOf symnode
      */
     destroy() {
+        if (undefined === this.destination) {
+            return false;
+        }
         if (!this.remove) {
-            this.exit('You are not running in removal mode.');
+            this.exit("You are not running in removal mode.");
         }
         this.destroy_handling(this.destination);
         return !this.exists(this.destination);
@@ -271,4 +330,4 @@ class symnode {
         return this.remove;
     }
 }
-exports.symnode = symnode;
+//# sourceMappingURL=symnode.js.map
