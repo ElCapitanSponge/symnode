@@ -39,7 +39,7 @@ class symnode {
         process.exit();
     }
     /**
-     * Check to see if administrator/super user privilages are required
+     * Check to see if administrator/super user privileges are required
      *
      * @private
      * @returns {boolean}
@@ -50,10 +50,10 @@ class symnode {
         return process.platform === 'win32';
     }
     /**
-     * Check to see if the shell is being executed with administrator/super user privilages
+     * Check to see if the shell is being executed with administrator/super user privileges
      *
      * @private
-     * @returns {boolean} Returns true if running under administrator/super user privilages
+     * @returns {boolean} Returns true if running under administrator/super user privileges
      *
      * @memberOf symnode
      */
@@ -160,6 +160,18 @@ class symnode {
         return (0, fs_1.lstatSync)(loc).isDirectory();
     }
     /**
+     * Utility for determining if the desired location is a file
+     *
+     * @private
+     * @param {string} loc The desired location to be checked
+     * @returns {boolean> Returns true if the location is a file
+     *
+     * @memberof symnode
+     */
+    is_file(loc) {
+        return (0, fs_1.lstatSync)(loc).isFile();
+    }
+    /**
      * Utility for determining if the desired location is a symbolic link
      *
      * @private
@@ -172,7 +184,7 @@ class symnode {
         return (0, fs_1.lstatSync)(loc).isSymbolicLink();
     }
     /**
-     * Hander function for removal of directories and symlinks
+     * Handler function for removal of directories and symlinks
      *
      * @private
      * @param {string} path
@@ -186,7 +198,7 @@ class symnode {
             (0, fs_1.unlinkSync)(path);
     }
     /**
-     * Generation of the desitination path if required
+     * Generation of the destination path if required
      *
      * @private
      *
@@ -212,9 +224,19 @@ class symnode {
             this.exit('Running in removal mode.');
         try {
             this.generate_destination_path();
-            if (this.is_dir(this.destination) || this.is_symlink(this.destination))
+            if (this.is_dir(this.destination) ||
+                this.is_symlink(this.destination)) {
                 this.destroy_handling(this.destination);
-            (0, fs_1.symlinkSync)(this.source, this.destination, 'dir');
+            }
+            if (this.is_dir(this.source)) {
+                (0, fs_1.symlinkSync)(this.source, this.destination, 'dir');
+            }
+            else if (this.is_file(this.source)) {
+                (0, fs_1.symlinkSync)(this.source, this.destination, 'file');
+            }
+            else {
+                throw new Error("source is not an existing file or dir");
+            }
         }
         catch (err) {
             this.exit(err);
@@ -232,8 +254,9 @@ class symnode {
      * @memberOf symnode
      */
     destroy() {
-        if (!this.remove)
+        if (!this.remove) {
             this.exit('You are not running in removal mode.');
+        }
         this.destroy_handling(this.destination);
         return !this.exists(this.destination);
     }

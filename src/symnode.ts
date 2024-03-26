@@ -113,7 +113,7 @@ export class symnode {
                     break
                 case '-s':
                 case '--src':
-                    if (use_prev){
+                    if (use_prev) {
                         this.source = arg
                         prev = undefined
                         use_prev = false
@@ -188,6 +188,19 @@ export class symnode {
     }
 
     /**
+     * Utility for determining if the desired location is a file
+     *
+     * @private
+     * @param {string} loc The desired location to be checked
+     * @returns {boolean> Returns true if the location is a file
+     *
+     * @memberof symnode
+     */
+    private is_file(loc: string): boolean {
+        return lstatSync(loc).isFile()
+    }
+
+    /**
      * Utility for determining if the desired location is a symbolic link
      *
      * @private
@@ -208,7 +221,7 @@ export class symnode {
      *
      * @memberOf symnode
      */
-    private destroy_handling(path: string):void {
+    private destroy_handling(path: string): void {
         if (this.is_dir(path))
             rmdirSync(path)
         else
@@ -223,7 +236,7 @@ export class symnode {
      * @memberOf symnode
      */
     private generate_destination_path(): void {
-        if (! existsSync(this.destination)) {
+        if (!existsSync(this.destination)) {
             let path_arr: string[] = this.destination.split('/')
             // INFO: remove the name of the symlink folder from the path
             path_arr.pop()
@@ -243,9 +256,20 @@ export class symnode {
             this.exit('Running in removal mode.')
         try {
             this.generate_destination_path()
-            if (this.is_dir(this.destination) || this.is_symlink(this.destination))
+            if (
+                this.is_dir(this.destination) ||
+                this.is_symlink(this.destination)
+            ) {
                 this.destroy_handling(this.destination)
-            symlinkSync(this.source, this.destination, 'dir')
+            }
+
+            if (this.is_dir(this.source)) {
+                symlinkSync(this.source, this.destination, 'dir')
+            } else if (this.is_file(this.source)) {
+                symlinkSync(this.source, this.destination, 'file')
+            } else {
+                throw new Error("source is not an existing file or dir")
+            }
         } catch (err) {
             this.exit(err)
             return false
@@ -263,8 +287,9 @@ export class symnode {
      * @memberOf symnode
      */
     public destroy(): boolean {
-        if (!this.remove)
+        if (!this.remove) {
             this.exit('You are not running in removal mode.')
+        }
         this.destroy_handling(this.destination)
         return !this.exists(this.destination)
     }
