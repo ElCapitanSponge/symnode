@@ -85,7 +85,7 @@ export class symnode {
      */
     private admin_running(): boolean {
         if (process.platform !== 'win32')
-            return !!process.env.SUDO_UID
+            return !!process.env["SUDO_UID"]
         try {
             execFileSync("net", ["session"], { "stdio": "ignore" })
             return true
@@ -105,7 +105,7 @@ export class symnode {
         let use_prev: boolean = false
         let prev: string | undefined;
         process.argv.forEach((arg: string) => {
-            let switch_arg: string = (use_prev) ? prev : arg
+            const switch_arg: string = (use_prev) ? prev as string : arg
             switch (switch_arg) {
                 case '-h':
                 case '--help':
@@ -236,11 +236,13 @@ export class symnode {
      * @memberOf symnode
      */
     private generate_destination_path(): void {
-        if (!existsSync(this.destination)) {
-            let path_arr: string[] = this.destination.split('/')
-            // INFO: remove the name of the symlink folder from the path
-            path_arr.pop()
-            mkdirSync(path_arr.join('/'), { recursive: true })
+        if (undefined !== this.destination) {
+            if (!existsSync(this.destination)) {
+                const path_arr: string[] = this.destination.split('/')
+                // INFO: remove the name of the symlink folder from the path
+                path_arr.pop()
+                mkdirSync(path_arr.join('/'), { recursive: true })
+            }
         }
     }
 
@@ -252,6 +254,12 @@ export class symnode {
      * @memberOf symnode
      */
     public link(): boolean {
+        if (
+            undefined === this.destination ||
+            undefined === this.source
+        ) {
+            return false
+        }
         if (this.remove)
             this.exit('Running in removal mode.')
         try {
@@ -271,7 +279,12 @@ export class symnode {
                 throw new Error("source is not an existing file or dir")
             }
         } catch (err) {
-            this.exit(err)
+            if ("object" === typeof err) {
+                const tmp_err = err as Error
+                this.exit(tmp_err.message)
+                return false
+            }
+            this.exit(err as string)
             return false
         }
         if (!this.is_symlink(this.destination))
@@ -287,6 +300,9 @@ export class symnode {
      * @memberOf symnode
      */
     public destroy(): boolean {
+        if (undefined === this.destination) {
+            return false
+        }
         if (!this.remove) {
             this.exit('You are not running in removal mode.')
         }

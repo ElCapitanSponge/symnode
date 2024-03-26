@@ -1,0 +1,24 @@
+{
+    "root": true,
+    "overrides": [
+        {
+            "files": [
+                "*.ts"
+            ],
+            "parserOptions": {
+                "project": [
+                    "**/tsconfig.json"
+                ]
+            },
+            "extends": [
+                "eslint:recommended",
+                "plugin:@typescript-eslint/strict-type-checked"
+            ],
+            "plugins": [
+                "@typescript-eslint"
+            ],
+            "parser": "@typescript-eslint/parser",
+            "rules": {}
+        }
+    ]
+}

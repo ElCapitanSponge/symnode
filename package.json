@@ -12,6 +12,7 @@
         "release": "npm-run-all build docs syft changelog package",
         "syft": "syft dir:./ --exclude ./dist --exclude ./docs --exclude ./sbom.json --output json --file ./sbom.json"
     },
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ElCapitanSponge/symnode.git"
@@ -27,14 +28,14 @@
         "url": "https://github.com/ElCapitanSponge/symnode/issues"
     },
     "homepage": "https://github.com/ElCapitanSponge/symnode#readme",
-    "dependencies": {
-        "typescript": "^4.8.4"
-    },
     "devDependencies": {
-        "@types/node": "^18.11.9",
+        "@types/node": "^20.11.30",
         "auto-changelog": "^2.4.0",
-        "nodemon": "^2.0.20",
+        "eslint": "^8.57.0",
+        "nodemon": "^3.1.0",
         "npm-run-all": "^4.1.5",
-        "typedoc": "^0.23.20"
+        "typedoc": "^0.25.12",
+        "typescript": "^5.4.3",
+        "typescript-eslint": "^7.4.0"
     }
 }

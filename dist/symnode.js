@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.symnode = void 0;
-const child_process_1 = require("child_process");
-const fs_1 = require("fs");
+import { execFileSync } from "child_process";
+import { existsSync, lstatSync, mkdirSync, rmdirSync, symlinkSync, unlinkSync } from "fs";
 /**
  * Symnode class
  * Symbolic link utility class for cli
@@ -10,7 +7,31 @@ const fs_1 = require("fs");
  * @export
  * @class symnode
  */
-class symnode {
+export class symnode {
+    /**
+     * The source location to be used for the symbolic link (if applicable)
+     *
+     * @private
+     * @type {(string | undefined)}
+     * @memberOf symnode
+     */
+    source;
+    /**
+     * The destination of the symbolic link, or the directory/folder that is to be removed
+     *
+     * @private
+     * @type {(string | undefined)}
+     * @memberOf symnode
+     */
+    destination;
+    /**
+     * Flag for tracking if the process is running under removal mode or not
+     *
+     * @private
+     * @type {boolean}
+     * @memberOf symnode
+     */
+    remove;
     /**
      * Creates an instance of symnode.
      *
@@ -59,9 +80,9 @@ class symnode {
      */
     admin_running() {
         if (process.platform !== 'win32')
-            return !!process.env.SUDO_UID;
+            return !!process.env["SUDO_UID"];
         try {
-            (0, child_process_1.execFileSync)("net", ["session"], { "stdio": "ignore" });
+            execFileSync("net", ["session"], { "stdio": "ignore" });
             return true;
         }
         catch (err) {
@@ -79,7 +100,7 @@ class symnode {
         let use_prev = false;
         let prev;
         process.argv.forEach((arg) => {
-            let switch_arg = (use_prev) ? prev : arg;
+            const switch_arg = (use_prev) ? prev : arg;
             switch (switch_arg) {
                 case '-h':
                 case '--help':
@@ -145,7 +166,7 @@ class symnode {
      * @memberOf symnode
      */
     exists(loc) {
-        return (0, fs_1.existsSync)(loc);
+        return existsSync(loc);
     }
     /**
      * Utility for determining if the desired location is a directory
@@ -157,7 +178,7 @@ class symnode {
      * @memberOf symnode
      */
     is_dir(loc) {
-        return (0, fs_1.lstatSync)(loc).isDirectory();
+        return lstatSync(loc).isDirectory();
     }
     /**
      * Utility for determining if the desired location is a file
@@ -169,7 +190,7 @@ class symnode {
      * @memberof symnode
      */
     is_file(loc) {
-        return (0, fs_1.lstatSync)(loc).isFile();
+        return lstatSync(loc).isFile();
     }
     /**
      * Utility for determining if the desired location is a symbolic link
@@ -181,7 +202,7 @@ class symnode {
      * @memberOf symnode
      */
     is_symlink(loc) {
-        return (0, fs_1.lstatSync)(loc).isSymbolicLink();
+        return lstatSync(loc).isSymbolicLink();
     }
     /**
      * Handler function for removal of directories and symlinks
@@ -193,9 +214,9 @@ class symnode {
      */
     destroy_handling(path) {
         if (this.is_dir(path))
-            (0, fs_1.rmdirSync)(path);
+            rmdirSync(path);
         else
-            (0, fs_1.unlinkSync)(path);
+            unlinkSync(path);
     }
     /**
      * Generation of the destination path if required
@@ -205,11 +226,13 @@ class symnode {
      * @memberOf symnode
      */
     generate_destination_path() {
-        if (!(0, fs_1.existsSync)(this.destination)) {
-            let path_arr = this.destination.split('/');
-            // INFO: remove the name of the symlink folder from the path
-            path_arr.pop();
-            (0, fs_1.mkdirSync)(path_arr.join('/'), { recursive: true });
+        if (undefined !== this.destination) {
+            if (!existsSync(this.destination)) {
+                const path_arr = this.destination.split('/');
+                // INFO: remove the name of the symlink folder from the path
+                path_arr.pop();
+                mkdirSync(path_arr.join('/'), { recursive: true });
+            }
         }
     }
     /**
@@ -220,6 +243,10 @@ class symnode {
      * @memberOf symnode
      */
     link() {
+        if (undefined === this.destination ||
+            undefined === this.source) {
+            return false;
+        }
         if (this.remove)
             this.exit('Running in removal mode.');
         try {
@@ -229,16 +256,21 @@ class symnode {
                 this.destroy_handling(this.destination);
             }
             if (this.is_dir(this.source)) {
-                (0, fs_1.symlinkSync)(this.source, this.destination, 'dir');
+                symlinkSync(this.source, this.destination, 'dir');
             }
             else if (this.is_file(this.source)) {
-                (0, fs_1.symlinkSync)(this.source, this.destination, 'file');
+                symlinkSync(this.source, this.destination, 'file');
             }
             else {
                 throw new Error("source is not an existing file or dir");
             }
         }
         catch (err) {
+            if ("object" === typeof err) {
+                const tmp_err = err;
+                this.exit(tmp_err.message);
+                return false;
+            }
             this.exit(err);
             return false;
         }
@@ -254,6 +286,9 @@ class symnode {
      * @memberOf symnode
      */
     destroy() {
+        if (undefined === this.destination) {
+            return false;
+        }
         if (!this.remove) {
             this.exit('You are not running in removal mode.');
         }
@@ -271,4 +306,4 @@ class symnode {
         return this.remove;
     }
 }
-exports.symnode = symnode;
+//# sourceMappingURL=symnode.js.map
