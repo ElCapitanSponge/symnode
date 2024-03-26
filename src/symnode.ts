@@ -1,26 +1,25 @@
 import { execFileSync } from "child_process"
 import { existsSync, lstatSync, mkdirSync, rmdirSync, symlinkSync, unlinkSync } from "fs";
-import { join } from "path";
 
 /**
  * Symnode class
  * Symbolic link utility class for cli
- * 
+ *
  * @export
  * @class symnode
  */
 export class symnode {
     /**
      * The source location to be used for the symbolic link (if applicable)
-     * 
+     *
      * @private
      * @type {(string | undefined)}
      * @memberOf symnode
      */
     private source: string | undefined;
     /**
-     * The desitination of the symbolic link, or the directory/folder that is to be removed
-     * 
+     * The destination of the symbolic link, or the directory/folder that is to be removed
+     *
      * @private
      * @type {(string | undefined)}
      * @memberOf symnode
@@ -28,7 +27,7 @@ export class symnode {
     private destination: string | undefined;
     /**
      * Flag for tracking if the process is running under removal mode or not
-     * 
+     *
      * @private
      * @type {boolean}
      * @memberOf symnode
@@ -37,7 +36,7 @@ export class symnode {
 
     /**
      * Creates an instance of symnode.
-     * 
+     *
      * @memberOf symnode
      */
     constructor() {
@@ -51,11 +50,11 @@ export class symnode {
 
     /**
      * Utility for displaying error messages. Followed by the termination of the process with the applicable error code
-     * 
+     *
      * @private
      * @param {string} [message='ERROR'] The error message to be displayed
      * @param {number} [exitCode=9] The applicable error code reflecting the process termination
-     * 
+     *
      * @memberOf symnode
      */
     private exit(message: string = 'ERROR', exitCode: number = 9): void {
@@ -65,11 +64,11 @@ export class symnode {
     }
 
     /**
-     * Check to see if administrator/super user privilages are required
-     * 
+     * Check to see if administrator/super user privileges are required
+     *
      * @private
-     * @returns {boolean} 
-     * 
+     * @returns {boolean}
+     *
      * @memberOf symnode
      */
     private admin_required(): boolean {
@@ -77,11 +76,11 @@ export class symnode {
     }
 
     /**
-     * Check to see if the shell is being executed with administrator/super user privilages
-     * 
+     * Check to see if the shell is being executed with administrator/super user privileges
+     *
      * @private
-     * @returns {boolean} Returns true if running under administrator/super user privilages
-     * 
+     * @returns {boolean} Returns true if running under administrator/super user privileges
+     *
      * @memberOf symnode
      */
     private admin_running(): boolean {
@@ -97,9 +96,9 @@ export class symnode {
 
     /**
      * Parsing and processing of the cli arguments
-     * 
+     *
      * @private
-     * 
+     *
      * @memberOf symnode
      */
     private args_parse(): void {
@@ -114,7 +113,7 @@ export class symnode {
                     break
                 case '-s':
                 case '--src':
-                    if (use_prev){
+                    if (use_prev) {
                         this.source = arg
                         prev = undefined
                         use_prev = false
@@ -146,9 +145,9 @@ export class symnode {
 
     /**
      * Helper text to be displayed
-     * 
+     *
      * @private
-     * 
+     *
      * @memberOf symnode
      */
     private help(): void {
@@ -164,11 +163,11 @@ export class symnode {
 
     /**
      * Utility for determining if the desired location exists
-     * 
+     *
      * @private
      * @param {string} loc The desired location
      * @returns {boolean} Returns true if the location exists
-     * 
+     *
      * @memberOf symnode
      */
     private exists(loc: string): boolean {
@@ -177,11 +176,11 @@ export class symnode {
 
     /**
      * Utility for determining if the desired location is a directory
-     * 
+     *
      * @private
      * @param {string} loc The desired location to be checked
      * @returns {boolean} Returns true if the location is a directory
-     * 
+     *
      * @memberOf symnode
      */
     private is_dir(loc: string): boolean {
@@ -189,12 +188,25 @@ export class symnode {
     }
 
     /**
+     * Utility for determining if the desired location is a file
+     *
+     * @private
+     * @param {string} loc The desired location to be checked
+     * @returns {boolean> Returns true if the location is a file
+     *
+     * @memberof symnode
+     */
+    private is_file(loc: string): boolean {
+        return lstatSync(loc).isFile()
+    }
+
+    /**
      * Utility for determining if the desired location is a symbolic link
-     * 
+     *
      * @private
      * @param {string} loc Desired location to be checked
      * @returns {boolean} Returns true if the location is a symbolic link
-     * 
+     *
      * @memberOf symnode
      */
     private is_symlink(loc: string): boolean {
@@ -202,14 +214,14 @@ export class symnode {
     }
 
     /**
-     * Hander function for removal of directories and symlinks
-     * 
+     * Handler function for removal of directories and symlinks
+     *
      * @private
-     * @param {string} path 
-     * 
+     * @param {string} path
+     *
      * @memberOf symnode
      */
-    private destroy_handling(path: string):void {
+    private destroy_handling(path: string): void {
         if (this.is_dir(path))
             rmdirSync(path)
         else
@@ -217,14 +229,14 @@ export class symnode {
     }
 
     /**
-     * Generation of the desitination path if required
-     * 
+     * Generation of the destination path if required
+     *
      * @private
-     * 
+     *
      * @memberOf symnode
      */
     private generate_destination_path(): void {
-        if (! existsSync(this.destination)) {
+        if (!existsSync(this.destination)) {
             let path_arr: string[] = this.destination.split('/')
             // INFO: remove the name of the symlink folder from the path
             path_arr.pop()
@@ -234,9 +246,9 @@ export class symnode {
 
     /**
      * Create a symbolic link from the source to the destination
-     * 
+     *
      * @returns {boolean} Returns true if symbolic link is created
-     * 
+     *
      * @memberOf symnode
      */
     public link(): boolean {
@@ -244,9 +256,20 @@ export class symnode {
             this.exit('Running in removal mode.')
         try {
             this.generate_destination_path()
-            if (this.is_dir(this.destination) || this.is_symlink(this.destination))
+            if (
+                this.is_dir(this.destination) ||
+                this.is_symlink(this.destination)
+            ) {
                 this.destroy_handling(this.destination)
-            symlinkSync(this.source, this.destination, 'dir')
+            }
+
+            if (this.is_dir(this.source)) {
+                symlinkSync(this.source, this.destination, 'dir')
+            } else if (this.is_file(this.source)) {
+                symlinkSync(this.source, this.destination, 'file')
+            } else {
+                throw new Error("source is not an existing file or dir")
+            }
         } catch (err) {
             this.exit(err)
             return false
@@ -258,23 +281,24 @@ export class symnode {
 
     /**
      * Destroy the destination file/folder
-     * 
+     *
      * @returns {boolean} Returns true if successful
-     * 
+     *
      * @memberOf symnode
      */
     public destroy(): boolean {
-        if (!this.remove)
+        if (!this.remove) {
             this.exit('You are not running in removal mode.')
+        }
         this.destroy_handling(this.destination)
         return !this.exists(this.destination)
     }
 
     /**
      * Returns if you are running in removal mode or not
-     * 
+     *
      * @returns {boolean} Returns true if in removal mode
-     * 
+     *
      * @memberOf symnode
      */
     public remove_mode(): boolean {

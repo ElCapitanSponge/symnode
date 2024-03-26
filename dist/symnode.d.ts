@@ -15,7 +15,7 @@ export declare class symnode {
      */
     private source;
     /**
-     * The desitination of the symbolic link, or the directory/folder that is to be removed
+     * The destination of the symbolic link, or the directory/folder that is to be removed
      *
      * @private
      * @type {(string | undefined)}
@@ -47,7 +47,7 @@ export declare class symnode {
      */
     private exit;
     /**
-     * Check to see if administrator/super user privilages are required
+     * Check to see if administrator/super user privileges are required
      *
      * @private
      * @returns {boolean}
@@ -56,10 +56,10 @@ export declare class symnode {
      */
     private admin_required;
     /**
-     * Check to see if the shell is being executed with administrator/super user privilages
+     * Check to see if the shell is being executed with administrator/super user privileges
      *
      * @private
-     * @returns {boolean} Returns true if running under administrator/super user privilages
+     * @returns {boolean} Returns true if running under administrator/super user privileges
      *
      * @memberOf symnode
      */
@@ -101,6 +101,16 @@ export declare class symnode {
      */
     private is_dir;
     /**
+     * Utility for determining if the desired location is a file
+     *
+     * @private
+     * @param {string} loc The desired location to be checked
+     * @returns {boolean> Returns true if the location is a file
+     *
+     * @memberof symnode
+     */
+    private is_file;
+    /**
      * Utility for determining if the desired location is a symbolic link
      *
      * @private
@@ -111,7 +121,7 @@ export declare class symnode {
      */
     private is_symlink;
     /**
-     * Hander function for removal of directories and symlinks
+     * Handler function for removal of directories and symlinks
      *
      * @private
      * @param {string} path
@@ -120,7 +130,7 @@ export declare class symnode {
      */
     private destroy_handling;
     /**
-     * Generation of the desitination path if required
+     * Generation of the destination path if required
      *
      * @private
      *
