@@ -14,7 +14,6 @@
         "lint:fix": "eslint . --fix",
         "syft": "syft dir:./ --exclude ./dist --exclude ./docs --exclude ./sbom.json --output json --file ./sbom.json"
     },
-    "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ElCapitanSponge/symnode.git"
