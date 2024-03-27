@@ -1,34 +1,33 @@
 {
-    "root": true,
-    "overrides": [
-        {
-            "files": [
-                "*.ts"
-            ],
-            "parserOptions": {
-                "project": [
-                    "**/tsconfig.json"
-                ]
-            },
-            "extends": [
-                "eslint:recommended",
-                "plugin:@typescript-eslint/strict-type-checked"
-            ],
-            "plugins": [
-                "@typescript-eslint"
-            ],
-            "parser": "@typescript-eslint/parser",
-            "rules": {
-                "quotes": [
-                    "error",
-                    "double"
-                ],
-                "indent": [
-                    "error",
-                    4,
-                    {"SwitchCase": 1}
-                ]
+    "env": {
+        "node": true,
+        "es2023": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2023,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
             }
-        }
-    ]
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ]
+    },
+    "globals": {
+        "process": true
+    }
 }
