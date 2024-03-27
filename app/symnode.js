@@ -1,6 +1,7 @@
 import { execFileSync } from "child_process"
 import { exit_codes, platforms } from "./lib/enums.js"
 import { existsSync, lstatSync, mkdirSync, rmdirSync, symlinkSync, unlinkSync } from "fs"
+import { isAbsolute, resolve } from "path"
 
 export class symnode {
     /**
@@ -49,6 +50,14 @@ export class symnode {
             )
         }
         this._args_parse()
+        // INFO: Convert source and dest to absolute paths
+        if (undefined !== this.#source) {
+            this.#source = this._to_absolute(this.#source)
+        }
+
+        if (undefined !== this.#destination) {
+            this.#destination = this._to_absolute(this.#destination)
+        }
     }
 
     /**
@@ -249,6 +258,21 @@ export class symnode {
             path_arr.pop()
             mkdirSync(path_arr.join("/"), { recursive: true })
         }
+    }
+
+    /**
+     * Convert a path to an absolute path
+     *
+     * @protected
+     * @param {string} path The path to be converted to an absolute path
+     * @returns {string} The absolute path
+     */
+    _to_absolute(path) {
+        if (isAbsolute(path)) {
+            return path
+        }
+
+        return resolve(path)
     }
 
     /**
