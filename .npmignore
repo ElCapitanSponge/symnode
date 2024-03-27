@@ -4,3 +4,5 @@ test/
 typedoc.json
 tsconfig.json
 releases/
+.eslint*
+.github/
