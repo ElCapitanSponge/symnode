@@ -1,9 +1,9 @@
-import { exit_codes } from "./lib/enums.js"
-import { symnode } from "./symnode.js"
+import { exit_codes } from "./app/lib/enums.js"
+import { symnode } from "./app/symnode.js"
 
 const app = new symnode()
 
-if (app.is_remove()) {
+if (app.is_remove) {
     app.destroy()
 } else {
     if (!app.link()) {
