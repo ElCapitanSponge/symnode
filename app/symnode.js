@@ -1,6 +1,6 @@
 import { execFileSync } from "child_process"
 import { exit_codes, platforms } from "./lib/enums.js"
-import { existsSync, lstatSync, mkdirSync, rmdirSync, unlinkSync } from "fs"
+import { existsSync, lstatSync, mkdirSync, rmdirSync, symlinkSync, unlinkSync } from "fs"
 
 export class symnode {
     /**
@@ -42,7 +42,7 @@ export class symnode {
     constructor() {
         this.#file_link = false
         this.#remove = false
-        if ( this.admin_required() && !this.is_admin()) {
+        if (this.admin_required() && !this.is_admin()) {
             this.exit(
                 "Super user shell privileges are required",
                 exit_codes.fatal
@@ -258,8 +258,69 @@ export class symnode {
      * @returns {boolean}
      */
     link() {
-        // TODO: Migrate the link function from TS
-        return false
+        if (this.#remove) {
+            this.exit(
+                "Linking not allowed. You are in remove mode",
+                exit_codes.invalid_arg
+            )
+        }
+
+        if (
+            undefined === this.#destination ||
+            undefined === this.#source
+        ) {
+            return false
+        }
+
+        if (
+            !this._is_dir(this.#source) ||
+            !this._is_file(this.#source) ||
+            !this._is_symlink(this.#source)
+        ) {
+            this.exit(
+                `The source path is not valid: ${this.#source}`,
+                exit_codes.invalid_arg
+            )
+        }
+
+        this._dest_path_gen()
+        if (this.#file_link) {
+            // INFO: This is linking for a file
+            if (
+                !this._is_file(this.#source) ||
+                !this._is_symlink(this.#source)
+            ) {
+                this.exit(
+                    `The source is not pointing to a file: ${this.#source}`,
+                    exit_codes.invalid_arg
+                )
+            }
+
+            symlinkSync(this.#source, this.#destination, "file")
+
+            if (!this._is_symlink(this.#destination)) {
+                return false
+            }
+        } else {
+            // INFO: This is linking for a directory
+            if (
+                !this._is_dir(this.#source) ||
+                !this._is_symlink(this.#source)
+            ) {
+                this.exit(
+                    `The source is not pointing to a directory: ${this.#source}`,
+                    exit_codes.invalid_arg
+                )
+            }
+
+            symlinkSync(this.#source, this.#destination, "dir")
+
+            if (!this._is_symlink(this.#destination)) {
+                return false
+            }
+        }
+
+        return true
     }
 
     /**
