@@ -1,8 +1,8 @@
 {
     "name": "symnode",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Multiplatform cli tool for crating symbolic links",
-    "main": "app/index.js",
+    "main": "index.js",
     "type": "module",
     "scripts": {
         "changelog": "auto-changelog -p --template keepachangelog --commit-limit false && git add CHANGELOG.md",
