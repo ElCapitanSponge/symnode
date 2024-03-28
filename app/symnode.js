@@ -195,33 +195,33 @@ export class symnode {
     /**
      * Does the path point to a directory?
      *
-     * @protected
+     * @public
      * @param {string} path The desired path to check
      * @returns {boolean}
      */
-    _is_dir(path) {
+    is_dir(path) {
         return lstatSync(path).isDirectory()
     }
 
     /**
      * Does the path point to a file?
      *
-     * @protected
+     * @public
      * @param {string} path The desired path to check
      * @returns {boolean}
      */
-    _is_file(path) {
+    is_file(path) {
         return lstatSync(path).isFile()
     }
 
     /**
      * Does the path point to a symbolic link?
      *
-     * @protected
+     * @public
      * @param {string} path The desired path to check
      * @returns {boolean}
      */
-    _is_symlink(path) {
+    is_symlink(path) {
         return lstatSync(path).isSymbolicLink()
     }
 
@@ -233,12 +233,12 @@ export class symnode {
      * @todo Implement a boolean return flag
      */
     _dir_sym_remove(path) {
-        if (this._is_dir(path)) {
+        if (this.is_dir(path)) {
             rmdirSync(path)
             return
         }
 
-        if (this._is_symlink(path)) {
+        if (this.is_symlink(path)) {
             unlinkSync(path)
             return
         }
@@ -297,9 +297,9 @@ export class symnode {
         }
 
         if (
-            !this._is_dir(this.#source) ||
-            !this._is_file(this.#source) ||
-            !this._is_symlink(this.#source)
+            !this.is_dir(this.#source) &&
+            !this.is_file(this.#source) &&
+            !this.is_symlink(this.#source)
         ) {
             this.exit(
                 `The source path is not valid: ${this.#source}`,
@@ -311,8 +311,8 @@ export class symnode {
         if (this.#file_link) {
             // INFO: This is linking for a file
             if (
-                !this._is_file(this.#source) ||
-                !this._is_symlink(this.#source)
+                !this.is_file(this.#source) &&
+                !this.is_symlink(this.#source)
             ) {
                 this.exit(
                     `The source is not pointing to a file: ${this.#source}`,
@@ -322,14 +322,14 @@ export class symnode {
 
             symlinkSync(this.#source, this.#destination, "file")
 
-            if (!this._is_symlink(this.#destination)) {
+            if (!this.is_symlink(this.#destination)) {
                 return false
             }
         } else {
             // INFO: This is linking for a directory
             if (
-                !this._is_dir(this.#source) ||
-                !this._is_symlink(this.#source)
+                !this.is_dir(this.#source) &&
+                !this.is_symlink(this.#source)
             ) {
                 this.exit(
                     `The source is not pointing to a directory: ${this.#source}`,
@@ -339,7 +339,7 @@ export class symnode {
 
             symlinkSync(this.#source, this.#destination, "dir")
 
-            if (!this._is_symlink(this.#destination)) {
+            if (!this.is_symlink(this.#destination)) {
                 return false
             }
         }
@@ -393,5 +393,25 @@ export class symnode {
      */
     get destination_get() {
         return this.#destination
+    }
+
+    /**
+     * Set the configured source
+     *
+     * @public
+     * @param {string} path
+     */
+    set source_set(path) {
+        this.#source = path
+    }
+
+    /**
+     * Set the configured destination
+     *
+     * @public
+     * @param {string} path
+     */
+    set destination_set(path) {
+        this.#destination = path
     }
 }
