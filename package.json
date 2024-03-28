@@ -1,6 +1,6 @@
 {
     "name": "symnode",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "Multiplatform cli tool for crating symbolic links",
     "main": "index.js",
     "type": "module",
