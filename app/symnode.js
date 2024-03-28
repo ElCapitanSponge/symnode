@@ -1,4 +1,3 @@
-import { execFileSync } from "child_process"
 import { exit_codes, platforms } from "./lib/enums.js"
 import { existsSync, lstatSync, mkdirSync, rmdirSync, symlinkSync, unlinkSync } from "fs"
 import { isAbsolute, resolve } from "path"
@@ -43,49 +42,14 @@ export class symnode {
     constructor() {
         this.#file_link = false
         this.#remove = false
-        if (this.admin_required() && !this.is_admin()) {
-            this.exit(
-                "Super user shell privileges are required",
-                exit_codes.fatal
-            )
-        }
         this._args_parse()
         // INFO: Convert source and dest to absolute paths
         if (undefined !== this.#source) {
-            this.#source = this._to_absolute(this.#source)
+            this.#source = this.to_absolute(this.#source)
         }
 
         if (undefined !== this.#destination) {
-            this.#destination = this._to_absolute(this.#destination)
-        }
-    }
-
-    /**
-     * Is admin privileges required?
-     *
-     * @public
-     * @returns {boolean}
-     */
-    admin_required() {
-        return platforms.WINDOWS === process.platform
-    }
-
-    /**
-     * Is the shell/terminal running with super user privileges
-     *
-     * @public
-     * @returns {boolean}
-     */
-    is_admin() {
-        if (platforms.WINDOWS === process.platform) {
-            return !!process.env["SUDO_UID"]
-        }
-
-        try {
-            execFileSync("net", ["session"], { "stdio": "ignore" })
-            return true
-        } catch (err) {
-            return false
+            this.#destination = this.to_absolute(this.#destination)
         }
     }
 
@@ -247,27 +211,32 @@ export class symnode {
     /**
      * Generation of the destination path if the structs in the desired path are missing
      *
-     * @protected
+     * @public
      */
-    _dest_path_gen() {
+    dest_path_gen() {
         if (
-            undefined !== this.#destination &&
-            !existsSync(this.#destination)
+            undefined !== this.#destination
         ) {
-            const path_arr = this.#destination.split("/")
-            path_arr.pop()
-            mkdirSync(path_arr.join("/"), { recursive: true })
+            if (platforms.WINDOWS === process.platform) {
+                const path_arr = this.#destination.split("\\")
+                path_arr.pop()
+                mkdirSync(path_arr.join("\\"), { recursive: true })
+            } else {
+                const path_arr = this.#destination.split("/")
+                path_arr.pop()
+                mkdirSync(path_arr.join("/"), { recursive: true })
+            }
         }
     }
 
     /**
      * Convert a path to an absolute path
      *
-     * @protected
+     * @public
      * @param {string} path The path to be converted to an absolute path
      * @returns {string} The absolute path
      */
-    _to_absolute(path) {
+    to_absolute(path) {
         if (isAbsolute(path)) {
             return path
         }
@@ -307,7 +276,7 @@ export class symnode {
             )
         }
 
-        this._dest_path_gen()
+        this.dest_path_gen()
         if (this.#file_link) {
             // INFO: This is linking for a file
             if (
