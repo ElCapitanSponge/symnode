@@ -288,8 +288,9 @@ export class symnode {
                     exit_codes.invalid_arg
                 )
             }
-
-            symlinkSync(this.#source, this.#destination, "file")
+            if (!this._exists(this.#destination)) {
+                symlinkSync(this.#source, this.#destination, "file")
+            }
 
             if (!this.is_symlink(this.#destination)) {
                 return false
@@ -306,7 +307,9 @@ export class symnode {
                 )
             }
 
-            symlinkSync(this.#source, this.#destination, "dir")
+            if (!this._exists(this.#destination)) {
+                symlinkSync(this.#source, this.#destination, "dir")
+            }
 
             if (!this.is_symlink(this.#destination)) {
                 return false
